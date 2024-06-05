@@ -9,8 +9,10 @@ def decimal_para_binario(num):
     return binario
 
 def binario_para_decimal(num):
-    if not num.replace(" ", "").isdigit() or '2' in num:
+    num = num.replace(" ", "")
+    if not all(digit in '01' for digit in num):
         return None
+    
     return sum(int(digit) * 2**i for i, digit in enumerate(num[::-1]))
 
 def decimal_para_octal(num):
