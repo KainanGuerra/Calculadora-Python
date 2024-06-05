@@ -4,6 +4,9 @@ def operate():
     while True:
         menu.display_menu()
         op = menu.get_user_input()
+        if op not in menu.conversion_functions:
+            print("Opção inválida. Tente novamente.")
+            continue         
         if op == "0":
             return
         num = input('Digite um número: ')

@@ -9,6 +9,17 @@ conversion_functions = {
     '6': conversoes.hexadecimal_para_decimal
 }
 
+def perform_conversion(op, num):
+    conversion_function = conversion_functions.get(op)
+    if conversion_function:
+        resultado = conversion_function(num)
+        if resultado is not None:
+            print(f'O resultado da conversão é: {resultado}')
+        else:
+            print("Entrada inválida. Por favor, verifique seu número.")
+    else:
+        print("Opção inválida.")
+
 def display_menu():
     print("------------------------------------------------------------------")
     print("[1] -> Decimal para binário")
@@ -24,13 +35,3 @@ def get_user_input():
     op = input("Digite a operação que será realizada: ")
     return op
 
-def perform_conversion(op, num):
-    conversion_function = conversion_functions.get(op)
-    if conversion_function:
-        resultado = conversion_function(num)
-        if resultado is not None:
-            print(f'O resultado da conversão é: {resultado}')
-        else:
-            print("Entrada inválida. Por favor, verifique seu número.")
-    else:
-        print("Opção inválida.")
