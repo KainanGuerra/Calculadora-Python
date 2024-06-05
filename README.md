@@ -4,3 +4,5 @@
 ### Realizado com auxílio do Professor Marco Antônio.
 
 * Proposta: Construir um programa em que seja possível, com interação do usúario, converter qualquer numéro de acordo com a base fatorial escolhida.
+* Sobre o projeto: o mesmo foi divido em 3 arquivos para definir cada uma de suas ações
+    
